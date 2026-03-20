@@ -703,8 +703,8 @@ const StatusBadge = ({ status }: { status: string }) => {
   );
 };
 
-const ConditionBadge = ({ condition }) => {
-  const colors = { "New": "#22c55e", "Excellent": "#3b82f6", "Good": "#8b5cf6", "Fair": "#f59e0b", "Poor": "#ef4444", "Non-functional": "#dc2626" };
+const ConditionBadge = ({ condition }: { condition: string }) => {
+  const colors: Record<string, string> = { "New": "#22c55e", "Excellent": "#3b82f6", "Good": "#8b5cf6", "Fair": "#f59e0b", "Poor": "#ef4444", "Non-functional": "#dc2626" };
   const c = colors[condition] || "#6b7280";
   return <span className="condition-badge" style={{ background: `${c}15`, color: c }}>{condition}</span>;
 };
