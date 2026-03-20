@@ -694,7 +694,7 @@ const styles = `
 // ==================== COMPONENTS ====================
 
 const StatusBadge = ({ status }: { status: string }) => {
-  const color = STATUS_COLORS[status] || "#6b7280";
+  const color = STATUS_COLORS[status as keyof typeof STATUS_COLORS] || "#6b7280";
   return (
     <span className="status-badge" style={{ background: `${color}15`, color }}>
       <span className="status-dot" style={{ background: color }}></span>
